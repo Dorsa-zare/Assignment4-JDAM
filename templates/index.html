@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='assignment4.css') }}">
 
 </head>
-<body>
+<body style="background-image: url('{{ image_url }}');">
     <div class="container text-center mt-5">
-        <h1 class="display-4">Ask me anything</h1>
+        <h1 class="display-4">The Unconscious Translator</h1>
         <form method="POST" class="mx-auto col-md-8 col-lg-6">
             <div class="mb-3">
                 <textarea name="prompt" rows="4" class="form-control" placeholder="Enter your prompt..."></textarea>
@@ -20,9 +20,16 @@
         </form>
         
         {% if result %}
-            <h3 class="mt-4">Response:</h3>
-            <div class="alert alert-secondary">{{ result }}</div>
+            <h3 class="mt-4">Dream Interpretation:</h3>
+            <div class="alert alert-secondary" style="white-space: pre-wrap;">{{ result }}</div>
+
+            {% if image_url %}
+                <h3 class="mt-4">Dream Visualization</h3>
+                <img src="{{ image_url }}" alt="Generated dream image"
+                    style="max-width:100%; border-radius:12px; margin-top:12px;">
+            {% endif %}
         {% endif %}
+
     </div>
 </body>
 </html>
