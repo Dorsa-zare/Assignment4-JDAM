@@ -73,10 +73,11 @@ def index():
             # 2) Generate image from the image prompt
             if image_prompt:
                 img = client.images.generate(
-                    model="gpt-image-1-mini",   # allowed by assignment
-                    prompt=image_prompt,
-                    size="1024x1024"
+                model="gpt-image-1-mini",
+                prompt=image_prompt,
+                size="512x512"
                 )
+
                 b64 = img.data[0].b64_json
                 image_url = f"data:image/png;base64,{b64}"
 
