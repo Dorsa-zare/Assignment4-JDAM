@@ -10,8 +10,8 @@
 body{
     /* layered gradient + glow */
     background:
-    radial-gradient(circle at 20% 20%, rgba(205,123,185,0.25), transparent 40%),
-    linear-gradient(135deg, #7a2a6c, #140518);
+    radial-gradient(circle at 20% 20%, rgba(255, 125, 222, 0.25), transparent 40%),
+    linear-gradient(135deg, #c76ab6, #140518);
 
     background-size:cover;
     background-position:center;
@@ -45,7 +45,7 @@ body::before{
     /* tinted fog instead of black */
     background: linear-gradient(
         135deg,
-        rgba(40, 0, 35, 0.45),
+        rgba(164, 53, 149, 0.45),
         rgba(5, 0, 10, 0.65)
     );
 
